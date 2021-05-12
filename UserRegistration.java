@@ -26,6 +26,19 @@ public class UserRegistration {
         return m.matches();
 	}
 	
+	public static boolean isValidMobileNumber(String mobilenumber) {
+		String regex = "^[+]{1}[0-9]{2}[ ][0-9]{10}";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(mobilenumber);
+        return m.matches();
+	}
+	
+	public static boolean isValidPasswordRule1(String password) {
+		String regex = "^[a-zA-Z0-9]{8,}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        return m.matches();
+	}
 
 	public static void main(String[] args) {
 		
@@ -46,6 +59,15 @@ public class UserRegistration {
         
         String emailId2 = "123@bl.co.in";
         System.out.println( emailId2 + " : " + isValidEmail(emailId2));
+        
+        String number1 = "+91 9919819801";
+        System.out.println( number1 + " : " + isValidMobileNumber(number1));
+        
+        String number2 = "9919819801";
+        System.out.println( number2 + " : " + isValidMobileNumber(number2));
+        
+        String pass1 = "abcdefgh";
+        System.out.println( pass1 + " : " + isValidPasswordRule1(pass1));
 
 	}
 
