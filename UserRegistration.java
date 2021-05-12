@@ -39,6 +39,13 @@ public class UserRegistration {
         Matcher m = p.matcher(password);
         return m.matches();
 	}
+	
+	public static boolean isValidPasswordRule2(String password) {
+		String regex = "^(?=.*[A-Z])[a-zA-Z\\d]{8,}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        return m.matches();
+	}
 
 	public static void main(String[] args) {
 		
@@ -68,6 +75,9 @@ public class UserRegistration {
         
         String pass1 = "abcdefgh";
         System.out.println( pass1 + " : " + isValidPasswordRule1(pass1));
+        
+        String pass2 = "ABcdefgh";
+        System.out.println( pass2 + " : " + isValidPasswordRule2(pass2));
 
 	}
 
