@@ -25,6 +25,7 @@ public class UserRegistration {
         Matcher m = p.matcher(emailid);
         return m.matches();
 	}
+	
 
 	public static void main(String[] args) {
 		
@@ -41,7 +42,10 @@ public class UserRegistration {
         System.out.println( lastName2 + " : " + isValidLastName(lastName2));
         
         String emailId1 = "abc.xyz@bl.co.in";
-        System.out.println( emailId1 + " : " + isValidLastName(emailId1));
+        System.out.println( emailId1 + " : " + isValidEmail(emailId1));
+        
+        String emailId2 = "123@bl.co.in";
+        System.out.println( emailId2 + " : " + isValidEmail(emailId2));
 
 	}
 
