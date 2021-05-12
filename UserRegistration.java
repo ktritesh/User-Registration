@@ -78,9 +78,6 @@ public class UserRegistration {
         String emailId1 = "abc.xyz@bl.co.in";
         System.out.println( emailId1 + " : " + isValidEmail(emailId1));
         
-        String emailId2 = "123@bl.co.in";
-        System.out.println( emailId2 + " : " + isValidEmail(emailId2));
-        
         String number1 = "+91 9919819801";
         System.out.println( number1 + " : " + isValidMobileNumber(number1));
         
@@ -98,6 +95,30 @@ public class UserRegistration {
         
         String pass4 = "ABc1ef#h";
         System.out.println( pass4 + " : " + isValidPasswordRule4(pass4));
+        
+        String emailId2 = "abc-100@yahoo.com";
+        System.out.println( emailId2 + " : " + isValidEmail(emailId2));
+        
+        String emailId3 = "abc.100@yahoo.com";
+        System.out.println( emailId3 + " : " + isValidEmail(emailId3));
+        
+        String emailId4 = "abc.111@abc.com";
+        System.out.println( emailId4 + " : " + isValidEmail(emailId4));
+        
+        String emailId5 = "abc-100@abc.net";
+        System.out.println( emailId5 + " : " + isValidEmail(emailId5));
+        
+        String emailId6 = "abc.100@abc.com.au";
+        System.out.println( emailId6 + " : " + isValidEmail(emailId6));
+        
+        String emailId7 = "abc@1.com";
+        System.out.println( emailId7 + " : " + isValidEmail(emailId7));
+        
+        String emailId8 = "abc@gmail.com.com";
+        System.out.println( emailId8 + " : " + isValidEmail(emailId8));
+        
+        String emailId9 = "abc+100@gmail.com";
+        System.out.println( emailId9 + " : " + isValidEmail(emailId9));
 
 	}
 
