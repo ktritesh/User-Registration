@@ -25,6 +25,13 @@ public class UserRegistration {
         Matcher m = p.matcher(emailid);
         return m.matches();
 	}
+	
+	public static boolean isValidMobileNumber(String mobilenumber) {
+		String regex = "^[+]{1}[0-9]{2}[ ][0-9]{10}";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(mobilenumber);
+        return m.matches();
+	}
 
 	public static void main(String[] args) {
 		
@@ -42,6 +49,12 @@ public class UserRegistration {
         
         String emailId1 = "abc.xyz@bl.co.in";
         System.out.println( emailId1 + " : " + isValidLastName(emailId1));
+        
+        String number1 = "+91 9919819801";
+        System.out.println( number1 + " : " + isValidMobileNumber(number1));
+        
+        String number2 = "9919819801";
+        System.out.println( number2 + " : " + isValidMobileNumber(number2));
 
 	}
 
