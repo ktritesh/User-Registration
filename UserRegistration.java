@@ -49,7 +49,10 @@ public class UserRegistration {
         
         String emailId1 = "abc.xyz@bl.co.in";
         System.out.println( emailId1 + " : " + isValidLastName(emailId1));
-        
+    
+        String emailId2 = "123@bl.co.in";
+        System.out.println( emailId2 + " : " + isValidEmail(emailId2));
+    
         String number1 = "+91 9919819801";
         System.out.println( number1 + " : " + isValidMobileNumber(number1));
         
